@@ -1,0 +1,895 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Exo+2|Noto+Sans+KR&display=swap');
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+}
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+img {
+    vertical-align: middle;
+}
+a img {
+    border: none;
+}
+li {
+    list-style: none;
+}
+address,
+em,
+i {
+    font-style: normal;
+}
+/* layout */
+.mo{
+    display: none;
+}
+.en{
+    font-family: 'Exo 2', sans-serief;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+.wrap{
+    margin : 0 auto;
+}
+#skip-nav{
+    position: fixed;
+    left: 0;
+    top: -41px;
+    width: 100%;
+    line-height: 40px;
+    background: #ff8342;
+    color: #fff;
+    text-align: center;
+    border-bottom: #fff000;
+    transition: all 0.5s;
+}
+#skip-nav:focus{
+    top: 0px;
+}
+header{
+    z-index: 200;
+    position: fixed;
+    top : 0px;
+    left : 0px;
+    width: 100%;
+    height: 100px;
+    color: black;
+    background:rgba(0, 0, 0, 0.2);
+    line-height: 100px;
+}
+.innerHeader{
+    width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.innerHeader .logo{
+    float: left;
+    padding-top: 25px;
+}
+.innerHeader .logo img{
+    width: 100%;
+    height : auto;
+}
+.innerHeader .gnbMo{
+    display: none;
+}
+.innerHeader .gnb{
+    float: left;
+    margin-left: 40px;
+}
+.innerHeader .gnb li{
+    float: left;
+    margin-right: 80px;
+
+}
+.innerHeader .gnb li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color:white;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+.innerHeader .gnb li a:hover,.innerHeader .gnb li a:hover:focus{
+    color: #ff8342;
+}
+.innerHeader .tnb{
+    float: right;
+}
+.innerHeader .tnb li{
+    float: left;
+    margin-right: 25px;
+}
+.innerHeader .tnb li a{
+    display: block;
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    font-size: 16px;
+    color : white;
+}
+.innerHeader .tnb li:nth-child(1) a i, .innerHeader .tnb li:nth-child(2) a i{
+    font-size: 20px;
+    margin-right: 8px;
+}
+.innerHeader .tnb li:last-child a {
+    display: block;
+    width: 105px;
+    height: auto;
+    line-height: 2;
+    border: 1px solid white;
+    border-radius: 30px;
+    margin-top: 35px;
+}
+.innerHeader .tnb li:last-child a i {
+    margin-left: 5px;
+}
+.innerHeader .tnb li:last-child a:hover,.innerHeader .tnb li:last-child a:focus{
+    background-color: white;
+    color: #ff8342;
+    transition: all 0.3s;
+}
+/* section.main */
+section.main{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/vis_4.jpg)no-repeat center/cover;
+    position: relative;
+    background-attachment: fixed;
+}
+section.main .mainTitle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    animation: mainTitle 1s;
+}
+@keyframes mainTitle{
+    0%{
+        opacity: 0;
+        top: 60%;
+    }
+    30%{
+        opacity: 0;
+        top: 60%;
+    }
+    100%{
+        opacity: 1;
+        top: 50%;
+    }
+
+}
+section.main .mainTitle h2{
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+section.main .mainTitle p{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+section.main .mainTitle .view{
+    position: relative;
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding: 8 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    border-radius: 40px;
+    overflow: hidden;
+}
+section.main .mainTitle .view:after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content : '';
+    width: 0;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.4) ;
+}
+section.main .mainTitle .view:hover:after{
+    width: 100%;
+    transition: all 0.3s;
+}
+/* section.about */
+section.about{
+    padding:80px 0;
+}
+section.about .title,
+section.innovations .title,
+section.me .title,
+section.sns .title{
+    color: black;
+    text-align: center;
+}
+section.about .title h2,
+section.innovations .title h2,
+section.me .title h2,
+section.sns .title h2{
+    font-size: 45px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+section.about .title h2 span ,
+section.innovations .title h2 span,
+section.me .title h2 span,
+section.sns .title h2 span{
+    color: #ff8342;
+}
+section.about .title p,
+section.innovations .title p,
+section.me .title p,
+section.sns .title p{
+    font-size: 18px;
+    color: #555;
+}
+section.about ul{
+    margin: 30px auto;
+    width: 1400px;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+section.about ul li{
+    float: left;
+    width: 33.3333%;
+}
+section.about ul li a{
+    display: block;
+    width: 100%;
+}
+section.about ul li a p.img{
+    width: 100%;
+    overflow: hidden;
+}
+section.about ul li a p.img img{
+    width: 100%;
+    height: auto;
+    transition: all 0.8s ;
+
+}
+section.about ul li a:hover p.img img,
+section.about ul li a:focus p.img img{
+    transform: scale(1.2);
+    transition: all 1s;
+}
+section.about ul li a .text{
+    padding: 30px;
+}
+section.about ul li a .text h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+section.about ul li a .text p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+section.about ul li a .text p.more{
+    padding-left: 40px;
+    font-weight: bold;
+    position: relative;
+}
+section.about ul li a .text p.more:before{
+    content:'\f178';
+    font-family: FontAwesome;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #ff8342;
+    color: white;
+    position: absolute;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* section.innovations */
+section.innovations{
+    margin-bottom: 230px;
+}
+section.innovations .imgBox{
+    position: relative;
+    width: 1400px;
+    height: 540px;
+    margin: 50px auto;
+    background: url(../img/product_1.jpg) no-repeat center/cover ;
+}
+section.innovations .imgBox .inner{
+    background: #3a3c4e;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -115px;
+}
+section.innovations .imgBox .inner h3{
+    background: white;
+    padding: 25px 45px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+section.innovations .imgBox .inner h3 span{
+    color: #ff8342;
+}
+section.innovations .imgBox .inner .bottom{
+    padding: 35px 85px;
+    box-sizing: border-box;
+    color: white;
+    overflow: hidden;
+    line-height: 1.6;
+}
+section.innovations .imgBox .inner .bottom p{
+    float: left;
+    font-size: 15px;
+}
+section.innovations .imgBox .inner .bottom a{
+    float: right;
+    padding: 7px 30px;
+    background: #ff8342;
+    border-radius: 50px;
+}
+section.innovations .imgBox .inner .bottom a:hover,section.innovations .imgBox .inner .bottom a:focus{
+    background: #f86010;
+}
+/* section.me */
+section.me{
+    margin-bottom: 150px;
+    padding:  80px 0;
+    background: url(../img/me.jpg) no-repeat center/cover; /*반복x 센터 위치 section.me를 꽉차게/*/
+}
+section.me ul.list{
+    width: 1400px;
+    margin: 50px auto;
+    font-size: 15px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+}
+section.me ul.list > li{
+    padding: 30px 60px;
+    box-sizing: border-box;
+}
+section.me ul.list > li:nth-child(1){
+    border-bottom: 1px solid #ddd;
+}
+section.me ul.list li h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+section.me ul.list li h3 span{
+    position: absolute;
+    left: -35px;
+    top: 4px;
+    color: #ff8342;
+}
+section.me ul.list li > p{
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+section.me ul.list li > a{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6;
+}
+section.me ul.list li > a span{
+    color : #ff8342;
+    font-weight: bold;
+    margin-left: 3px;
+    font-weight: 14px;
+}
+section.me ul.in{
+    margin-bottom: 30px;
+}
+section.me ul.in li{
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+section.me ul.in li strong{
+    float: left;
+    width: 12%;
+    font-weight: bold;
+}
+section.me ul.in li p{
+    float: left;
+    width: 88%;
+    position: relative;
+}
+section.me ul.in li p:before{
+    position: absolute;
+    content: '';
+    left: -40px;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    background: rgb(214, 214, 214);
+    border-radius: 50%;
+}
+section.me button{
+    display: block;
+    width: 280px;
+    background: #f37321;
+    border: none;
+    padding: 10px 0;
+    text-align: center;
+    margin: auto;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+
+}
+section.me button:hover,section.me button:focus{
+    background-color: #eb5b0d;
+    border-color: #eb5b0d;
+    color: #fff;
+}
+/* section.sns */
+section.sns{
+    margin-bottom: 170px;
+}
+section.sns ul{
+    width: 1400px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+section.sns ul li{
+    float: left;
+    width: 32%;
+    margin-right: 1%;
+}
+section.sns ul li:last-child{
+    margin-right: 0;
+}
+section.sns ul a{
+     display: block;
+     width: 100%;
+}
+section.sns ul a p.img{
+    height: 251px;
+    overflow: hidden;
+    position: relative;
+}
+
+section.sns ul a p.img:before{
+    content:'';
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255, 131, 66, 0.9);
+    transition: all 0.5s;
+}
+section.sns ul a:hover p.img:before,
+section.sns ul a:focus p.img:before{
+    width: 100%;
+    transition: all 0.6s ease-out;
+}
+section.sns ul a p.img img{
+    width: 100%;
+}
+section.sns ul a p.img:after{
+    content: "BLOG";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Exo 2', 'sans-serif';
+    font-size: 15px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 5px 30px;
+    opacity: 0;
+    transition: all 0.6s;
+}
+section.sns ul a:hover p.img:after,section.sns ul a:focus p.img:after{
+    opacity: 1;
+    transition: all 0.6s;
+}
+section.sns ul a .bottom{
+    width: 100%;
+    padding: 20px 0 20px 30px;
+    box-sizing: border-box;
+
+}
+section.sns ul a .bottom p{
+    font-size: 18px;
+    font-weight: bold;
+}
+section.sns ul a .bottom p.color{
+    color: #ff8342;
+    font-size: 15px;
+    font-weight: normal;
+}
+section.sns ul a .bottom p.time{
+    color:#999;
+    font-size: 15px;
+    font-weight: normal;
+    padding-left: 20px;
+    position: relative;
+    margin-top: 30px;
+}
+section.sns ul a .bottom p.time:before {
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    content: '\f017';
+    font-family: FontAwesome;
+    font-size: 15px;
+}
+/*footer*/
+footer{
+    clear: both; /*위에 적용했던 ul list float를 제거*/
+    border-top: 1px solid #999;
+    padding: 30px 0 50px 0;
+}
+footer .inner{
+    width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+footer .inner .ftLogo{
+    float: left;
+}
+footer .inner .address{
+    float: left;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+footer .inner .address li:nth-child(1){
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+footer .inner .address li:nth-child(2){
+    color: #999;
+    font-family: 'Exo 2', 'sans-serif';
+}
+footer .inner .list{
+    float: right;
+}
+footer .inner .list li{
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 80px;
+}
+footer .inner .list li a{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+footer .inner .list li a:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: #d6d6d6;
+    border-radius: 50%;
+    right: -45px;
+    top: 10px;
+    }
+    footer .inner .list li a:hover, footer .inner .list a:hover{
+        color: #ff8432;
+        text-decoration: underline;
+    }
+    footer .inner .list li:last-child{
+        font-family: 'Exo 2', 'sans-serif';
+        margin-right: 80px;
+    }
+
+    /* 1599px */
+    @media screen and (max-width:1599px){
+        header .innerHeader{
+            width: 95%;
+            min-width: 1024px;
+        }
+        .innerHeader .gnb{
+            margin-left: 50px;
+        }
+        .innerHeader .gnb li{
+            margin-right: 40px;
+        }
+        .innerHeader .gnb li:last-child{
+            margin-right: 0px;
+        }
+        .innerHeader .gnb li{
+            margin-right: 10px;
+        }
+        section.about ul,
+        section.innovations .imgBox,
+        section.me ul.list,
+        section.sns ul{
+            width: 95%;
+        }
+
+        footer .inner{
+            width: 95%;
+            min-width: 90%;
+        }
+        footer .inner .list li{
+            margin-left: 20px;
+        }
+        footer .inner .list li a:before {
+            right: -13px;
+        }
+    }
+    /* 태블릿모드 1024px */
+    @media screen and (max-width:1024px){
+        header .innerHeader{
+            width: 95%;
+            min-width: 90%;
+        }
+        section.main .mainTitle{
+            width: 80%;
+        }
+        .innerHeader .gnb,
+        .innerHeader .tnb{
+            display: none;
+        }
+        .innerHeader .gnbMo{
+            display: block;
+            color: white;
+            font-size: 40px;
+            float: right;
+            margin-top: 30px;
+        }
+        section.innovations .imgBox .inner{
+            bottom: -178px;
+        }
+        section.me ul.in li p:before{
+            left: -20px;
+        }
+        section.me ul.in li{
+            margin-bottom: 0px;
+
+        }
+        section.me ul.list li > p{
+            margin-bottom: 10px;
+        }
+        section.me{
+            margin-bottom: 50px;
+        }
+        section.sns ul li a p.img{
+            height: 170px;
+
+        }
+        section.sns ul li{
+            width: 32.2%;
+            margin-right: 1.7%;
+        }
+        footer .inner .list{
+            display: none;
+        }
+    }
+    /* 768px */
+    @media screen and (max-width:768px){
+        section.main .mainTitle h2{
+            font-size: 40px;
+
+        }
+        section.main .mainTitle p{
+            font-size: 20px;
+        }
+        section.about{
+            padding: 50px 0;
+        }
+        section.about ul li{
+            width: 100%;
+        }
+
+        section.innovations .imgBox .inner{
+            bottom: -209px;
+        }
+        section.innovations .imgBox .inner h3{
+            padding: 20px;
+        }
+        section.innovations .imgBox .inner .bottom {
+            padding: 30px;
+       }
+        section.innovations .imgBox .inner .bottom p{
+            float: none;
+            margin-bottom: 30px;
+        }
+        section.innovations .imgBox .inner .bottom p .clear {
+            display: none;
+        }
+        section.innovations .imgBox .inner .bottom a {
+            float: none;
+            margin-left: 32%;
+        }
+        section.me{
+            padding: 50px 0;
+            margin-bottom: 80px;
+        }
+        section.me ul.in li strong{
+            float: none;
+            width: 100%;
+            display:block;
+            font-size: 17px;
+        }
+        section.sns ul li{
+            width: 100%;
+        }
+        section.sns ul li a p.img{
+        height: 380px;
+        }
+        footer .inner .ftLogo {
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+        footer .inner .address {
+            float: none;
+            margin-top: 10px;
+            margin-left: 10px;
+            text-align: center;
+        }
+    }
+    /* 414px */
+    @media screen and (max-width:414px){
+        header{
+            height: 60px;
+            line-height: 60px;
+        }
+        .innerHeader .gnbMo{
+            margin-top: 11px;
+        }
+        header .innerHeader{
+            height: 100%;
+            line-height: 60px;
+        }
+        .innerHeader .logo{
+            padding-top: 6px;
+        }
+        section.main .mainTitle h2{
+            font-size: 30px;
+        }
+        section.main .mainTitle p{
+            font-size: 16px;
+        }
+        section.main .mainTitle .view {
+            width: 150px;
+            font-size: 5px;
+        }
+        section.about .title h2,
+        section.innovations .title h2,
+        section.me .title h2,
+        section.sns .title h2 {
+            font-size: 25px;
+        }
+        section.about .title p,
+        section.innovations .title p,
+        section.me .title p,
+        section.sns .title p {
+            font-size: 14px;
+        }
+        section.about{
+            padding: 30px 0;
+        }
+        section.about ul{
+            padding-bottom: 60px;
+            border-bottom: none;
+        }
+        section.about ul li a{
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            background-color: #fafafa;
+        }
+        section.about ul li a{
+            margin-bottom: 10px;
+        }
+        section.innovations{
+            margin-bottom: 280px;
+        }
+        section.innovations .imgBox{
+            height: 400px;
+        }
+        section.innovations .imgBox .inner .bottom a {
+            margin-left: 20%;
+        }
+        section.me{
+            margin-bottom: 50px;
+        }
+        section.sns{
+            margin-bottom: 50px;
+        }
+        section.sns ul li a p.img{
+            height: 200px;
+        }
+        footer{
+            padding: 30 0 30 0;
+        }
+        footer .inner{
+            margin-top: 30px;
+        }
+        footer .inner .address{
+            margin: 0;
+        }
+        footer .inner .address li:nth-child(1){
+            margin-top: 5px;
+        }
+    }
+    /* 모바일 모드 320px */
+    @media screen and (max-width:320px){
+        br.mo{
+            display: block;
+        }
+        .wrap{
+            min-width: 320px;
+        }
+        header .innerHeader{
+            min-width: 320px;
+        }
+        section.main .mainTitle h2{
+            font-size: 22px;
+        }
+        section.main .mainTitle p{
+            font-size: 14px;
+        }
+        .innerHeader .logo{
+            width: 140px;
+            height: auto;
+            margin-top: 4px;
+        }
+        .innerHeader .gnbMo{
+            margin-right: 10px;
+        }
+        section.about ul{
+            margin-bottom: 10px;
+        }
+        section.innovations .imgBox .inner h3{
+            text-align: center;
+        }
+        section.me ul.list li > p .clear{
+            display: none;
+        }
+        footer .inner{
+            margin-top: 30px;
+        }
+    }
